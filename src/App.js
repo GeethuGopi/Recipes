@@ -24,6 +24,7 @@ function App() {
   const getQuery = (e)=>{
     e.preventDefault()
     setQuery(search)
+    setSearch('')
   }
 
   return (
@@ -35,11 +36,13 @@ function App() {
         </button>
       </form>
       {recipes.map((recipe) => (
+        
         <Recipes
           key={recipe.recipe.label}
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           img={recipe.recipe.image}
+          ingredients={recipe.recipe.ingredients}
         />
       ))}
     </div>
