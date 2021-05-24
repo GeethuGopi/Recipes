@@ -35,6 +35,7 @@ function App() {
           Search
         </button>
       </form>
+      <div className="recipes"> 
       {recipes.map((recipe) => (
         
         <Recipes
@@ -45,6 +46,8 @@ function App() {
           ingredients={recipe.recipe.ingredients}
         />
       ))}
+      </div>
+     
     </div>
   );
 }
